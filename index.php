@@ -81,12 +81,11 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
         <ul class="lots__list">
 
             <!--заполните этот список из массива с товарами-->
-            <?php
-           foreach ($lots as $key => $value):
-
-
             <li class="lots__item lot">
-                <div class="lot__image">
+
+                <?php
+                foreach ($lots as $key => $value): ?>
+                    <div class="lot__image">
                     <img src="<?= $value['url'];?>" width="350" height="260" alt="">
                 </div>
                 <div class="lot__info">
