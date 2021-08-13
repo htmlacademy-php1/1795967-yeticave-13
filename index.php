@@ -67,9 +67,9 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
         <ul class="promo__list">
             <!--заполните этот список из массива категорий-->
             <?php
-            foreach ($categories as $value): ?>
+            foreach ($categories as $category): ?>
             <li class="promo__item promo__item--boards">
-                <a class="promo__link" href="pages/all-lots.html"><?= $value; ?></a>
+                <a class="promo__link" href="pages/all-lots.html"><?= $category; ?></a>
             </li>
             <?php endforeach; ?>
         </ul>
@@ -84,16 +84,16 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
             <li class="lots__item lot">
 
                 <?php
-                foreach ($lots as $key => $value): ?>
+                foreach ($lots as $lot): ?>
                     <div class="lot__image">
-                    <img src="<?= $value['url'];?>" width="350" height="260" alt="">
+                    <img src="<?= $lot['url'];?>" width="350" height="260" alt="">
                 </div>
                 <div class="lot__info">
-                    <span class="lot__category"><?= $value['categories']; ?></span>
-                    <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?= $value['title']; ?></a></h3>
+                    <span class="lot__category"><?= $lot['categories']; ?></span>
+                    <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?= $lot['title']; ?></a></h3>
                     <div class="lot__state">
                         <div class="lot__rate">
-                            <span class="lot__amount"><?= $value['cost']; ?></span>
+                            <span class="lot__amount"><?= $lot['cost']; ?></span>
                             <span class="lot__cost">cost<b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
@@ -112,9 +112,9 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
             <?php
-            foreach ($categories as $value): ?>
+            foreach ($categories as $category): ?>
             <li class="nav__item">
-                <a href="pages/all-lots.html"><?= $value;?></a>
+                <a href="pages/all-lots.html"><?= $category; ?></a>
             </li>
             <?php endforeach; ?>
         </ul>
