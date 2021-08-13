@@ -101,6 +101,7 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </li>
         </ul>
     </section>
