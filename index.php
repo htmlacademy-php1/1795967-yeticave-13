@@ -2,6 +2,7 @@
 $is_auth = rand(0, 1);
 
 $user_name = 'Александр'; // укажите здесь ваше имя
+
 $categories = ['boards' => 'Доски и лыжи', 'attachment' => 'Крепления', 'boots' => 'Ботинки', 'clothing' => 'Одежда', 'tools' => 'Инструменты', 'other' => 'Разное'];
 $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'Доски и лыжи', 'cost' => 10999, 'url' => 'img/lot-1.jpg'],
 ['title' => 'DC Ply Mens 2016/2017 Snowboard', 'categories' => 'Доски и лыжи', 'cost' => 15999, 'url' => 'img/lot-2.jpg'],
@@ -9,11 +10,12 @@ $lots = [['title' => '2014 Rossignol District Snowboard', 'categories' => 'До�
 ['title' => 'Ботинки для сноуборда DC Mutiny Charocal', 'categories' => 'Ботинки', 'cost' => 10999, 'url' => 'img/lot-4.jpg'],
 ['title' => 'Куртка для сноуборда DC Mutiny Charocal', 'categories' => 'Одежда', 'cost' => 7500, 'url' => 'img/lot-5.jpg'],
 ['title' => 'Маска Oakley Canopy', 'categories' => 'Разное', 'cost' => 5400, 'url' => 'img/lot-6.jpg']];
+
 $num = $lot['cost'];
 function lot_cost($num) {
      $numb = number_format(ceil($num), 0, "", " ")?> .<span><b class="rub">р</b></span>;
     <?php return $numb;
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -40,6 +42,7 @@ function lot_cost($num) {
 
         <nav class="user-menu">
             <?php
+
             if ($is_auth): ?>
             <div class="user-menu__logged">
 	            <p><?= $user_name ?></p>
@@ -57,6 +60,7 @@ function lot_cost($num) {
                 </li>
 		    </ul>
             <?php endif; ?>
+
 
 
 
@@ -170,3 +174,4 @@ function lot_cost($num) {
 <script src="script.js"></script>
 </body>
 </html>
+
